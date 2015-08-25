@@ -1,5 +1,8 @@
 language: cpp
-script: make
-
 before_install:
+  - sudo add-apt-repository -y ppa:sonkun/sfml-stable
+  - sudo apt-get update -qq
+install:
   - sudo apt-get install -qq libsfml-dev
+script:
+  - make
